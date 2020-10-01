@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - Assignment One</title>
+  </head>
+
+  <body>
+    <script>
+      //Uppgift 1:
+      var name = "Sandra Frandén";
+      let age = 33;
+      const lives = "Malmö";
+
+      //Uppgift 2:
+      let boolean = true;
+      let number = 2;
+      let string = "Some words and some more words.";
+      let myDog = {
+        name: "Charlie",
+        age: 8,
+        breed: "Westie",
+      };
+      let myShows = ["Walking Dead", "The Office", "Community"];
+
+      //Uppgift 3:
+      function sumAdd(numberOne, numberTwo) {
+        return numberOne + numberTwo;
+      }
+
+      let sum = sumAdd(5, 20);
+
+      console.log("Summan blir: " + sum);
+
+      // Uppgift 4:
+      var today = new Date();
+
+      var date =
+        today.getFullYear() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getDate();
+
+      var time =
+        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+      var dateTime = date + " " + time;
+
+      console.log(date);
+      console.log(time);
+
+      //Uppgift 5:
+      let kiddo = {
+        name: "Stella",
+        age: 6,
+        breed: "Human",
+        logBaby() {
+          console.log("Name: " + kiddo.name);
+          console.log("Age: " + kiddo.age);
+          console.log("Breed: " + kiddo.breed);
+        },
+      };
+
+      kiddo.logBaby();
+
+      // Uppgift 6:
+      let arrayNumbers = [4, 8, 15, 16, 23, 42];
+      console.log(arrayNumbers[5]);
+
+      let arraySmaller = arrayNumbers.filter(smaller);
+      function smaller(x) {
+        return x < 20;
+      }
+      //console.log(arraySmaller);
+
+      let arrayDouble = arraySmaller.map(double);
+      function double(x) {
+        return x * 2;
+      }
+      //console.log(arrayDouble);
+
+      arrayDouble.forEach((element) => console.log(element));
+
+      //Uppgift 7:
+      let loopCount = 1;
+
+      while (loopCount <= 6) {
+        if (loopCount <= 3) {
+          console.log("Loop " + loopCount);
+        } else {
+          console.log("Almost done...");
+        }
+        if (loopCount == 6) {
+          console.log("Done.");
+        }
+        loopCount++;
+      }
+    </script>
+  </body>
+</html>
